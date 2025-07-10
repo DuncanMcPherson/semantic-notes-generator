@@ -2,6 +2,16 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemanticRelease.NotesGenerator", "SemanticRelease.NotesGenerator.csproj", "{F1AFB336-3264-4863-BC24-BAA67B0386E4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".circleci", ".circleci", "{F96FEA4E-891C-42E4-BA5A-CFAE6EFE7285}"
+	ProjectSection(SolutionItems) = preProject
+		.circleci\config.yml = .circleci\config.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{30BA9163-EB7E-4ADA-9E07-BC1317C51387}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\build-and-pack.sh = scripts\build-and-pack.sh
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
