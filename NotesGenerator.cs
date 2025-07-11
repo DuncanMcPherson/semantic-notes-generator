@@ -28,8 +28,11 @@ namespace SemanticRelease.NotesGenerator
 
         private Task GenerateNotesAsync(ReleaseContext context)
         {
+            Console.WriteLine("Beginning step 'generateNotes' for plugin 'NotesGenerator'");
             if (!(context.PluginData["commits"] is List<Commit> commits) || commits.Count == 0)
             {
+                Console.WriteLine("No commits found");
+                Console.WriteLine("Ending step 'generateNotes' for plugin 'NotesGenerator'");
                 return Task.CompletedTask;
             }
 
@@ -90,6 +93,9 @@ namespace SemanticRelease.NotesGenerator
                     .Aggregate((a, b) => $"{a}\n{b}");
                 notes += $"{section}\n\n";
             }
+            
+            Console.WriteLine(notes);
+            Console.WriteLine("Ending step 'generateNotes' for plugin 'NotesGenerator'");
             
             context.PluginData["releaseNotesMD"] = notes;
             
