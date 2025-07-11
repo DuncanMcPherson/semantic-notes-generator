@@ -35,5 +35,10 @@ namespace SemanticRelease.NotesGenerator
             
             return $"{cleanedUrl}/commit/{commitHash}";
         }
+        
+        public static bool IsNullOrEmpty(this string str)
+        {
+            return string.IsNullOrEmpty(str);
+        }
     }
 }
